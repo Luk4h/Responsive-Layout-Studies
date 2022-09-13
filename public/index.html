@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+        <script>
+            function calculateDivSize( divToCalculate, divToChangeText) {
+                let divToCalculateDom = document.getElementById( divToCalculate);
+                let divToChangeTextDom = document.getElementById( divToChangeText);
+                divToChangeTextDom.textContent = `${ divToCalculateDom.offsetHeight} x ${ divToCalculateDom.offsetWidth}`
+            }
+            addEventListener('resize', (event) => { calculateDivSize( 'My-Rectangle-1', 'My-Rectangle-1'); calculateDivSize( 'My-Box-1', 'My-Box-1-Text'); calculateDivSize( 'My-Box-2', 'My-Box-2-Text'); calculateDivSize( 'My-Box-3', 'My-Box-3-Text'); calculateDivSize( 'My-Box-1', 'My-Box-1-Text'); });
+            addEventListener('load', (event) => { calculateDivSize( 'My-Rectangle-1', 'My-Rectangle-1'); calculateDivSize( 'My-Box-1', 'My-Box-1-Text'); calculateDivSize( 'My-Box-2', 'My-Box-2-Text'); calculateDivSize( 'My-Box-3', 'My-Box-3-Text'); calculateDivSize( 'My-Box-1', 'My-Box-1-Text'); });
+        </script>
+        <link href= "/css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="Frame-1">
+            <div id="My-Rectangle-1" class="Rectangle">
+            </div>
+            <div class="Frame-2">
+                <div id="My-Box-1" class="Box">
+                    <div class="Start"></div>
+                    <div class="Middle">
+                        <div id="My-Box-1-Text">Middle</div>
+                    </div>
+                    <div class="End"></div>
+                </div>
+                <div id="My-Box-2" class="Box">
+                    <div class="Start"></div>
+                    <div class="Middle">
+                        <div id="My-Box-2-Text">Middle</div>
+                    </div>
+                    <div class="End"></div>
+                </div>
+                <div id="My-Box-3" class="Box">
+                    <div class="Start"></div>
+                    <div class="Middle">
+                        <div id="My-Box-3-Text">Middle</div>
+                    </div>
+                    <div class="End"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
